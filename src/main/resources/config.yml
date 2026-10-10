@@ -1,0 +1,17 @@
+# GPPermissionNodes config
+# Restores two permission-node features removed from GriefPrevention core:
+#  1. Permission trust: /trust, /accesstrust, /containertrust, /managetrust, /untrust accept [permission.node]
+#  2. Group bonus blocks: /adjustbonusclaimblocks [permission.node] <amount>
+
+# Map of permission node -> bonus claim blocks granted while a player holds that permission.
+# Example:
+# group-bonus-blocks:
+#   vip.blocks: 1000
+#   staff.blocks: 5000
+group-bonus-blocks: {}
+
+# How often (seconds) to re-sync online players' effective bonus blocks.
+# Sync applies delta between current group total and last granted total,
+# so rank changes propagate without clobbering admin-granted /acb <player> bonuses.
+# 0 disables periodic sync (join + group change still sync that player).
+sync-interval-seconds: 60

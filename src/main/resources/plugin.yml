@@ -1,0 +1,17 @@
+name: "${project.name}"
+main: "${project.groupId}.${project.artifactId}.${project.name}"
+version: "${project.version}"
+api-version: "${project.api-version}"
+author: GPAddons
+description: "${project.description}"
+depend:
+  - GriefPrevention
+commands:
+  gppermissionnodes:
+    description: Reload GPPermissionNodes configuration.
+    usage: /<command> reload
+    permission: gppermissionnodes.admin
+permissions:
+  gppermissionnodes.admin:
+    description: Allows reloading GPPermissionNodes configuration.
+    default: op
