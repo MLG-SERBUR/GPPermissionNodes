@@ -17,7 +17,7 @@ Install GriefPrevention and GPPermissionNodes into your plugins folder, then res
 
 ## Permission trust usage
 
-Trust a permission node the same way you trust a player. Use the node in brackets, or type the bare node if no player with that name exists:
+Trust a permission node the same way you trust a player. Use the permission in brackets, or type the bare permission node if no player with that name exists:
 
 ```bash
 /trust [vip.pass]
@@ -31,8 +31,8 @@ Trust a permission node the same way you trust a player. Use the node in bracket
 
 Notes:
 
-- The permission is stored with the claim as `[node]`, so it survives restarts and works with existing claims that already contain permission entries.
-- Anyone online who holds the node receives that trust level while they hold it. Removing the permission removes the access.
+- The permission is stored with the claim as `[permission]`, so it survives restarts and works with existing claims that already contain permission entries.
+- Anyone online who holds the permission receives that trust level while they hold it. Removing the permission removes the access.
 - Subdivisions inherit permission trust from their parent claim.
 - Trusting individual players and `public` works exactly as before and is still handled by GriefPrevention core.
 
@@ -73,7 +73,7 @@ sync-interval-seconds: 60
 
 ## Compatibility
 
-Player names, `public`, and `all` behave exactly as GriefPrevention core defines them. Only bracketed nodes and bare dotted nodes without a matching player are handled by this addon. Command aliases (`tr`, `ut`, `ct`, `at`, `acb`, `permissiontrust`) work as usual.
+Player names, `public`, and `all` behave exactly as GriefPrevention core defines them. Only bracketed permissions and bare dotted permission nodes without a matching player are handled by this addon. Command aliases (`tr`, `ut`, `ct`, `at`, `acb`, `permissiontrust`) work as usual.
 
 ## Building from source
 
